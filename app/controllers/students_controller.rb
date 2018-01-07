@@ -6,6 +6,10 @@ class StudentsController < ApplicationController
   end
 
   def show
+    if @student.active == true
+      @status_string = "This student is currently active."
+    else
+      @status_string = "This student is currently inactive."
   end
 
   private
